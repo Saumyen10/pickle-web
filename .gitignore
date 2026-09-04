@@ -1,0 +1,5 @@
+photos/*
+!photos/web/
+!photos/extra/
+
+.vscode/
