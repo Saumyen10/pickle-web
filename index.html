@@ -146,6 +146,13 @@
     text-transform:uppercase; font-size:.85rem; color: var(--red);
   }
   .hero h2{ font-size: clamp(2.1rem, 6vw, 3.4rem); color: var(--ink); margin-top:.3em; }
+  .hero h3{
+    font-family: 'Noto Sans Bengali', 'Fraunces', serif;
+    font-size: clamp(1.5rem, 4.5vw, 1.9rem);
+    font-weight: 600;
+    color: var(--red);
+    margin: 0 0 .5em;
+  }
   .hero p.lead{ font-size: 1.05rem; max-width: 520px; margin: 0 auto 1.4em; }
   .hero-jar{ width: min(220px, 60vw); margin: 0 auto; }
   .cta-row{ display:flex; gap:12px; flex-wrap:wrap; justify-content:center; }
@@ -176,6 +183,19 @@
   .about-icon{ width:84px; }
   .about-text{ max-width: 560px; text-align:center; }
   .about-text h2{ font-size: clamp(1.5rem, 4vw, 2rem); }
+  .about-highlight{
+    background: var(--card);
+    border-left: 4px solid var(--brass);
+    border-radius: 12px;
+    padding: 18px 20px;
+    text-align: left;
+  }
+  .about-highlight p{ margin: 0 0 .7em; }
+  .about-highlight p:last-child{ margin-bottom: 0; }
+  .about-highlight p[lang="as"]{
+    font-family: 'Noto Sans Bengali', 'Work Sans', sans-serif;
+    color: var(--ink-soft);
+  }
 
   /* ---------- products ---------- */
   .product-grid{
@@ -397,6 +417,7 @@
       <div class="hero-text">
         <div class="hero-eyebrow">Homemade · Small batch · Fresh & Fine </div>
         <h2>Tholuwa Achar</h2>
+        <h3>থলুৱা আচাৰ</h3>
         <p class="lead">Achar made in the traditional way: sun-dried spices, mustard oil along with hardwork and patience. Mango, Amla, Bamboo Shoot, Chilly and many more — made in small batches, made fresh at home.</p>
         <div class="cta-row">
           <a href="#visit" class="btn btn-primary">Visit the shop</a>
@@ -434,8 +455,10 @@
         <div class="hero-eyebrow" style="color:var(--olive)">Our story</div>
         <h2>Small kitchen, bright flavours.</h2>
         <p>Every pickle journey starts the same way it always has — raw materials dried in sunlight, spices pounded/mixed by hand, mustard oil and patience doing the rest. No factory, no shortcuts, and in some weeks we simply sell out.</p>
-        <p>Alongside the pickles, the shop carries traditional handwoven gamusa and Assamese mekhela sador. Jalpan staples — pithaguri, sandoh and behar — are made fresh through the season too.</p>
-        <p lang="as">আচাৰৰ উপৰিও, দোকানত পৰম্পৰাগত হাতে বোৱা গামোচা আৰু অসমীয়া মেখেলা চাদৰ পোৱা যায়। পিঠাগুড়ি, সানদহ আৰু বেহাৰৰ দৰে জলপানৰ সামগ্ৰীও পোৱা যায় ।</p>
+        <div class="about-highlight">
+          <p><b>A beautiful treasury of Assamese culture and taste!</b><br>From pickles, Mekhela-Chador, and Gamosa to authentic homemade snacks like Pithaguri and Sandah, everything is available with us throughout the season.</p>
+          <p lang="as"><b>অসমীয়া কৃষ্টি আৰু সোৱাদৰ এক অপূৰ্ব সঁফুৰা!</b><br>আমাৰ ইয়াত আচাৰ, মেখেলা-চাদৰ, গামোচাৰ পৰা আৰম্ভ কৰি পিঠাগুড়ি, খাৰলি আৰু সান্দহৰ দৰে ঘৰুৱা জলপানৰ সামগ্ৰীও উপলব্ধ।</p>
+        </div>
       </div>
     </div>
   </section>
@@ -585,36 +608,40 @@
         <div class="more-card">
           <img src="photos/web/pithaguri.jpg" alt="Bag of Tholuwa Achar's pithaguri (rice flour for pitha)" loading="lazy">
           <h3>Pithaguri</h3>
+          <p class="assamese-name">পিঠাগুড়ি</p>
           <div class="lang-toggle" role="group" aria-label="Description language">
             <button type="button" class="lang-btn active" data-lang="en" aria-pressed="true">EN</button>
             <button type="button" class="lang-btn" data-lang="as" aria-pressed="false">অস</button>
           </div>
-          <p class="product-desc" data-en="Traditionally prepared rice flour made by soaking, drying, and finely grinding rice — perfect for making homemade pitha, laru and to eat with jalpan." data-as="পৰম্পৰাগতভাৱে চাউল তিয়াই, শুকুৱাই মিহিকৈ গুড়ি কৰি লোৱা হয় — পিঠা, লাৰু আৰু বিভিন্ন জলপানৰ সৈতে খাবলৈ একেবাৰে উপযুক্ত ।">Traditionally prepared rice flour made by soaking, drying, and finely grinding rice — perfect for making homemade pitha, laru and to eat with jalpan.</p>
+          <p class="product-desc" data-en="Traditionally prepared rice flour made by soaking, drying, and finely grinding rice — perfect for making homemade pitha, laru and to eat with jalpan." data-as="পৰম্পৰাগতভাৱে চাউল তিয়াই আৰু শুকুৱাই মিহিকৈ গুড়ি কৰি প্ৰস্তুত কৰা এক উৎকৃষ্ট সামগ্ৰী — পিঠা, লাৰু আৰু বিভিন্ন জলপান তৈয়াৰ কৰিবলৈ তথা খাবলৈ একেবাৰে উপযুক্ত।">Traditionally prepared rice flour made by soaking, drying, and finely grinding rice — perfect for making homemade pitha, laru and to eat with jalpan.</p>
         </div>
 
         <div class="more-card">
           <img src="photos/web/sandoh-1.jpg" data-gallery="photos/web/sandoh-1.jpg, photos/web/sandoh-2.jpg" alt="Bag of Tholuwa Achar's sandoh (roasted rice flour)" loading="lazy">
           <h3>Sandoh</h3>
+          <p class="assamese-name">সান্দহ</p>
           <div class="lang-toggle" role="group" aria-label="Description language">
             <button type="button" class="lang-btn active" data-lang="en" aria-pressed="true">EN</button>
             <button type="button" class="lang-btn" data-lang="as" aria-pressed="false">অস</button>
           </div>
-          <p class="product-desc" data-en="Prepared by soaking and dry-roasting rice until golden colour arises, then grinding it into a fragrant powder — typically enjoyed as jalpan with milk and jaggery." data-as="পৰম্পৰাগতভাৱে চাউল তিয়াই ভাজি সোণালী ৰঙৰ গুড়ি কৰি লোৱা হয় — সাধাৰণতে গাখীৰ-গুৰৰ সৈতে জলপান হিচাপে খোৱা হয় ।">Prepared by soaking and dry-roasting rice until golden colour arises, then grinding it into a fragrant powder — typically enjoyed as jalpan with milk and jaggery.</p>
+          <p class="product-desc" data-en="Prepared by soaking and dry-roasting rice until golden colour arises, then grinding it into a fragrant powder — typically enjoyed as jalpan with milk and jaggery." data-as="পৰম্পৰাগতভাৱে চাউল তিয়াই আৰু ভাজি সোণালী ৰং হোৱাকৈ গুড়ি কৰি প্ৰস্তুত কৰা এক সুস্বাদু জলপান —  গাখীৰ আৰু গুৰৰ সৈতে খাবলৈ একেবাৰে উপযুক্ত।">Prepared by soaking and dry-roasting rice until golden colour arises, then grinding it into a fragrant powder — typically enjoyed as jalpan with milk and jaggery.</p>
         </div>
 
         <div class="more-card">
           <img src="photos/web/behar-1.jpg" data-gallery="photos/web/behar-1.jpg, photos/web/behar-2.jpg" alt="Tholuwa Achar's kharoli (behar), a spicy mustard-powder coated dish, wrapped in banana leaf" loading="lazy">
           <h3>Kharoli (Behar)</h3>
+          <p class="assamese-name">খাৰলি (বেহুৱা)</p>
           <div class="lang-toggle" role="group" aria-label="Description language">
             <button type="button" class="lang-btn active" data-lang="en" aria-pressed="true">EN</button>
             <button type="button" class="lang-btn" data-lang="as" aria-pressed="false">অস</button>
           </div>
-          <p class="product-desc" data-en="A homemade dish rolled in roasted mustard powder and freshly wrapped in banana leaf." data-as="খাৰেৰে সনা সৰিয়হৰ গুড়ি, কলপাতত মেৰিয়াই সতেজকৈ সজা এক পৰম্পৰাগত ঘৰুৱা খাদ্য — সোৱাদত অলপ জলা ।">A homemade dish rolled in roasted mustard powder and freshly wrapped in banana leaf.</p>
+          <p class="product-desc" data-en="A homemade dish rolled in roasted mustard powder and freshly wrapped in banana leaf — mildly spicy with a distinctive flavour." data-as="খাৰেৰে সনা সৰিয়হৰ গুড়ি কলপাতত মেৰিয়াই সতেজকৈ প্ৰস্তুত কৰা এক পৰম্পৰাগত ঘৰুৱা খাদ্য — সোৱাদত অলপ জলা আৰু ব্যতিক্ৰমী।">A homemade dish rolled in roasted mustard powder and freshly wrapped in banana leaf — mildly spicy with a distinctive flavour.</p>
         </div>
 
         <div class="more-card">
           <img src="photos/web/kola-khar-1.jpg" data-gallery="photos/web/kola-khar-1.jpg, photos/web/kola-khar-2.jpg" alt="Tholuwa Achar's kola-khar, a traditional Assamese alkaline extract" loading="lazy">
           <h3>Kola-khar</h3>
+          <p class="assamese-name">কলাখাৰ</p>
           <div class="lang-toggle" role="group" aria-label="Description language">
             <button type="button" class="lang-btn active" data-lang="en" aria-pressed="true">EN</button>
             <button type="button" class="lang-btn" data-lang="as" aria-pressed="false">অস</button>
