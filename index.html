@@ -3,8 +3,58 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Maa's Handmade Pickle — Homemade Assamese Achar</title>
-<meta name="description" content="Small-batch, handmade pickles (achar) — mango, lime, chilli, khorisa and more. Made fresh, the traditional Assamese way.">
+<title>Tholuwa Achar — Homemade Assamese Achar</title>
+<meta name="description" content="Small-batch, handmade pickles (achar) — mango, amla, bamboo shoot, ghost pepper, star fruit, elephant apple and more. Made fresh, the traditional Assamese way.">
+
+<link rel="icon" href="photos/extra/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="photos/extra/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="photos/extra/favicon-16.png" sizes="16x16" type="image/png">
+<link rel="apple-touch-icon" href="photos/extra/apple-touch-icon.png">
+
+<link rel="canonical" href="https://saumyen10.github.io/pickle-web/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Tholuwa Achar">
+<meta property="og:title" content="Tholuwa Achar — Homemade Assamese Achar">
+<meta property="og:description" content="Small-batch, handmade pickles (achar) — mango, amla, bamboo shoot, ghost pepper, star fruit, elephant apple and more. Made fresh, the traditional Assamese way.">
+<meta property="og:url" content="https://saumyen10.github.io/pickle-web/">
+<meta property="og:image" content="https://saumyen10.github.io/pickle-web/photos/web/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_IN">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Tholuwa Achar — Homemade Assamese Achar">
+<meta name="twitter:description" content="Small-batch, handmade pickles (achar) — mango, amla, bamboo shoot, ghost pepper, star fruit, elephant apple and more.">
+<meta name="twitter:image" content="https://saumyen10.github.io/pickle-web/photos/web/og-image.jpg">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Store",
+  "name": "Tholuwa Achar",
+  "image": "https://saumyen10.github.io/pickle-web/photos/web/og-image.jpg",
+  "url": "https://saumyen10.github.io/pickle-web/",
+  "description": "Small-batch, handmade Assamese pickles (achar) — mango, amla, bamboo shoot, ghost pepper, star fruit, elephant apple and more, made fresh the traditional way.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Mohila Bazar, M.G. Road",
+    "addressLocality": "Mangaldai",
+    "addressRegion": "Assam",
+    "addressCountry": "IN"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 26.438376576933077,
+    "longitude": 92.02790757525457
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": "Saturday",
+    "opens": "08:00",
+    "closes": "18:00"
+  }
+}
+</script>
+
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600;700&family=Noto+Sans+Bengali:wght@400;600&display=swap');
 
@@ -71,17 +121,6 @@
   .brand-text span{
     display:block; font-size:.82rem; color:#f0d9d9; font-family:'Work Sans',sans-serif;
   }
-  .header-call{
-    display:flex; align-items:center; gap:8px;
-    background: var(--brass); color:#2B2118;
-    padding: 11px 16px; min-height:44px; border-radius: 999px;
-    font-weight:600; font-size:.92rem; text-decoration:none;
-    white-space:nowrap;
-    transition: transform .15s ease;
-  }
-  .header-call:hover{ transform: translateY(-1px); }
-  .header-call svg{ width:16px; height:16px; }
-
   .site-nav{ background: var(--red-dark); }
   .site-nav .wrap{
     display:flex; gap: 8px; padding: 4px 12px;
@@ -149,7 +188,11 @@
     transition: transform .18s ease, box-shadow .18s ease;
   }
   .product-card:hover{ transform: translateY(-3px); box-shadow: 0 10px 20px -12px rgba(43,33,24,.25); }
-  .product-card svg{ width: 78px; margin: 0 auto 14px; }
+  .product-card img,
+  .more-card img{
+    width: 100%; aspect-ratio: 1 / 1; object-fit: cover;
+    border-radius: 12px; margin: 0 0 14px; cursor: pointer;
+  }
   .product-card h3{ font-size: 1.1rem; margin-bottom:.2em; }
   .product-card p{ font-size: .95rem; margin:0; }
   .assamese-name{
@@ -179,17 +222,17 @@
     background: var(--card); border-radius: 16px; padding: 20px 14px;
     text-align:center; border: 1px solid rgba(43,33,24,.08);
   }
-  .more-card svg{ width:56px; margin: 0 auto 10px; }
   .more-card h3{ font-size: 1.05rem; margin-bottom:.2em; }
   .more-card p{ font-size:.92rem; margin:0; }
   .more-note{ text-align:center; font-size:.92rem; margin-top:22px; }
 
   /* ---------- testimonials ---------- */
-  .testimonials .wrap{ max-width: 920px; }
+  .testimonials .wrap{ max-width: 1080px; }
   .testimonial-grid{
     display:grid; grid-template-columns: 1fr; gap: 18px;
   }
   .testimonial-card{
+    display:flex; flex-direction:column;
     background: var(--card); border-radius: 18px; padding: 24px;
     border: 1px solid rgba(43,33,24,.08);
   }
@@ -198,7 +241,7 @@
     font-family:'Fraunces', serif; font-style: italic; font-size: 1.05rem;
     color: var(--ink); margin-bottom: 10px;
   }
-  .testimonial-name{ font-size:.9rem; color: var(--ink-soft); margin:0; }
+  .testimonial-name{ font-size:.9rem; color: var(--ink-soft); margin:auto 0 0; }
   .testimonial-placeholder-note{
     text-align:center; font-size:.9rem; color: var(--ink-soft);
     margin: 18px 0 0; font-style: italic;
@@ -223,29 +266,55 @@
     max-width: 480px; margin: 0 auto;
     text-align:center;
   }
-  .visit-phone{
-    display:inline-flex; align-items:center; gap:10px;
-    font-family:'Fraunces', serif; font-size: 1.6rem; font-weight:600;
-    color:#fff; text-decoration:none; margin-bottom: 14px;
-  }
-  .visit-phone svg{ width:24px; height:24px; }
-  .visit-card p{ color: #f4e3e3; font-size:.98rem; margin-bottom: 0; }
+  .visit-card p{ color: #f4e3e3; font-size:.98rem; margin-bottom: 0; margin-top: 0; }
   .visit-note{ margin-top:18px !important; padding-top:18px; border-top:1px solid rgba(255,255,255,.18); }
+  .visit-hours{
+    display:inline-block; margin: 12px 0 4px;
+    background: rgba(255,255,255,.14); border: 1px solid rgba(255,255,255,.32);
+    color:#fff; font-weight:700; font-size:.9rem;
+    padding: 8px 16px; border-radius: 999px;
+  }
 
   /* ---------- footer ---------- */
   footer{ padding: 28px 0 36px; text-align:center; }
   footer p{ font-size:.9rem; color: var(--ink-soft); margin: 0; }
 
-  /* ---------- sticky mobile call bar ---------- */
-  .sticky-call{
-    position: fixed; left:16px; right:16px; bottom:16px; z-index:60;
-    background: var(--brass); color: var(--ink);
-    display:flex; align-items:center; justify-content:center; gap:10px;
-    padding: 14px; border-radius: 999px; text-decoration:none;
-    font-weight:700; font-size:.95rem;
-    box-shadow: 0 8px 20px -6px rgba(43,33,24,.4);
+  /* ---------- lightbox ---------- */
+  body.lightbox-open{ overflow:hidden; }
+  .lightbox{
+    position: fixed; inset:0; z-index:200;
+    display:flex; align-items:center; justify-content:center;
+    background: rgba(20,14,8,.8);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    padding: 20px;
   }
-  .sticky-call svg{ width:18px; height:18px; }
+  .lightbox[hidden]{ display:none; }
+  .lightbox-img{
+    max-width: min(92vw, 900px); max-height: 86vh;
+    border-radius: 12px; box-shadow: 0 20px 60px -10px rgba(0,0,0,.6);
+    display:block;
+  }
+  .lightbox-close,
+  .lightbox-prev,
+  .lightbox-next{
+    position:absolute;
+    width:44px; height:44px; border-radius:999px;
+    background: rgba(255,255,255,.15); border:1px solid rgba(255,255,255,.35);
+    color:#fff; font-size:1.3rem; line-height:1; cursor:pointer;
+    display:flex; align-items:center; justify-content:center;
+    transition: background .15s ease;
+  }
+  .lightbox-close:hover,
+  .lightbox-prev:hover,
+  .lightbox-next:hover{ background: rgba(255,255,255,.3); }
+  .lightbox-close{ top:16px; right:16px; font-size:1.6rem; }
+  .lightbox-prev,
+  .lightbox-next{ top:50%; transform:translateY(-50%); }
+  .lightbox-prev{ left:16px; }
+  .lightbox-next{ right:16px; }
+  .lightbox-prev[hidden],
+  .lightbox-next[hidden]{ display:none; }
 
   @media (prefers-reduced-motion: reduce){
     *{ transition:none !important; animation:none !important; }
@@ -253,11 +322,12 @@
 
   /* ---------- tablet / desktop ---------- */
   @media (min-width: 700px){
-    .product-grid{ grid-template-columns: repeat(3, 1fr); }
-    .more-grid{ grid-template-columns: repeat(3, 1fr); }
-    .testimonial-grid{ grid-template-columns: repeat(3, 1fr); }
-    .about .grid{ flex-direction:row; text-align:left; gap:48px; }
-    .about-text{ text-align:left; }
+    .product-grid{ grid-template-columns: repeat(4, 1fr); }
+    .more-grid{ grid-template-columns: repeat(4, 1fr); }
+    .testimonial-grid{ grid-template-columns: repeat(4, 1fr); }
+    .about .grid{ flex-direction:row; text-align:left; gap:48px; justify-content:center; }
+    .about-icon{ width:110px; }
+    .about-text{ text-align:left; max-width:680px; }
   }
 
   @media (min-width: 1000px){
@@ -266,8 +336,6 @@
     .hero p.lead{ margin: 0 0 1.4em; }
     .cta-row{ justify-content:flex-start; }
     .hero-jar{ width: 280px; flex-shrink:0; margin:0; }
-    .product-grid{ grid-template-columns: repeat(5, 1fr); }
-    .sticky-call{ display:none; }
     .brand-text span{ display:block; }
     .map-frame iframe{ height:300px; }
   }
@@ -284,14 +352,10 @@
         <rect x="24" y="14" width="12" height="8" rx="2" fill="#fff"/>
       </svg>
       <div class="brand-text">
-        <h1>Maa's Handmade Pickle</h1>
-        <span>Homemade Assamese achar</span>
+        <h1>Tholuwa Achar</h1>
+        <span>From our kitchen to your stomach — nothing in between.</span>
       </div>
     </div>
-    <a class="header-call" href="tel:+91XXXXXXXXXX">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
-      Call
-    </a>
   </div>
   <nav class="site-nav" aria-label="Section navigation">
     <div class="wrap">
@@ -331,9 +395,9 @@
         <path d="M50 96 h100" stroke="rgba(43,33,24,.15)" stroke-width="2"/>
       </svg>
       <div class="hero-text">
-        <div class="hero-eyebrow">Small batch · No shortcuts</div>
-        <h2>Maa's Handmade Pickle</h2>
-        <p class="lead">Mustard oil, sun, and patience — the way Assamese kitchens have always made achar. Mango, lime, chilli, khorisa and more, pickled fresh in small batches at home.</p>
+        <div class="hero-eyebrow">Homemade · Small batch · Fresh & Fine </div>
+        <h2>Tholuwa Achar</h2>
+        <p class="lead">Achar made in the traditional way: sun-dried spices, mustard oil along with hardwork and patience. Mango, Amla, Bamboo Shoot, Chilly and many more — made in small batches, made fresh at home.</p>
         <div class="cta-row">
           <a href="#visit" class="btn btn-primary">Visit the shop</a>
           <a href="#products" class="btn btn-secondary">See our pickles</a>
@@ -368,13 +432,10 @@
       </svg>
       <div class="about-text">
         <div class="hero-eyebrow" style="color:var(--olive)">Our story</div>
-        <h2>A family kitchen, not a factory</h2>
-        <p>Maa has been making pickles the same way for as long as anyone in the family can remember — chillies sun-dried on the roof, spices hand-pounded, every jar aged in mustard oil until the flavour is just right. Nothing here is mass-produced, and some weeks we simply run out.</p>
-        <p>
-          We sell handmade Assamese pickles including bamboo shoot, olive, mango and lemon. Also selling traditional gamusa, Asomiya sadar mekhela clothes, and raw materials for Assamese jalpan such as sandah, laru and pitha.
-
-          ইয়াতে হাতে তৈয়াৰ কৰা অসমীয়া আচাৰ উপলব্ধ — বাঁহগাজ, জলফাই, আম আৰু নেমুৰ আচাৰ আদি। ইয়াৰ লগতে পৰম্পৰাগত গামোচা, অসমীয়া চাদৰ-মেখেলা কাপোৰ আৰু অসমীয়া জলপান - সানদহ, লাৰু আৰু পিঠা উপলব্ধ।
-        </p>
+        <h2>Small kitchen, bright flavours.</h2>
+        <p>Every pickle journey starts the same way it always has — raw materials dried in sunlight, spices pounded/mixed by hand, mustard oil and patience doing the rest. No factory, no shortcuts, and in some weeks we simply sell out.</p>
+        <p>Alongside the pickles, the shop carries traditional handwoven gamusa and Assamese mekhela sador. Jalpan staples — pithaguri, sandoh and behar — are made fresh through the season too.</p>
+        <p lang="as">আচাৰৰ উপৰিও, দোকানত পৰম্পৰাগত হাতে বোৱা গামোচা আৰু অসমীয়া মেখেলা চাদৰ পোৱা যায়। পিঠাগুড়ি, সানদহ আৰু বেহাৰৰ দৰে জলপানৰ সামগ্ৰীও পোৱা যায় ।</p>
       </div>
     </div>
   </section>
@@ -388,92 +449,124 @@
       <div class="product-grid">
 
         <div class="product-card">
-          <svg viewBox="0 0 100 120" aria-hidden="true">
-            <rect x="34" y="4" width="32" height="10" rx="3" fill="var(--brass)"/>
-            <path d="M24 18h52v74a10 10 0 0 1-10 10H34a10 10 0 0 1-10-10Z" fill="none" stroke="var(--ink)" stroke-width="2.5"/>
-            <path d="M27 48h46v40a7 7 0 0 1-7 7H34a7 7 0 0 1-7-7Z" fill="var(--mango)"/>
-            <ellipse cx="50" cy="70" rx="10" ry="6" fill="#c9701f"/>
-          </svg>
-          <h3>Mango</h3>
+          <img src="photos/web/aam-mango-1.jpg" data-gallery="photos/web/aam-mango-1.jpg, photos/web/aam-mango-2.jpg" alt="Jar of Tholuwa Achar's mango pickle" loading="lazy">
+          <h3>Aam</h3>
           <p class="assamese-name">আমৰ আচাৰ</p>
           <div class="lang-toggle" role="group" aria-label="Description language">
             <button type="button" class="lang-btn active" data-lang="en" aria-pressed="true">EN</button>
             <button type="button" class="lang-btn" data-lang="as" aria-pressed="false">অস</button>
           </div>
-          <p class="product-desc" data-en="Raw mango, mustard oil, five-spice mix." data-as="কেঁচা আম, শৰিয়হৰ তেল আৰু পাঁচফোৰণেৰে সাজি উলিওৱা।">Raw mango, mustard oil, five-spice mix.</p>
+          <p class="product-desc" data-en="Raw mangoes blended with mustard oil and five-spice, traditionally pickled for a bold, aromatic flavour." data-as="আম, মিঠা তেল আৰু পাঁচফোৰণেৰে পৰম্পৰাগতভাৱে প্ৰস্তুত কৰা জুতি লগা ঘৰুৱা মচলাযুক্ত আচাৰ।">Raw mangoes blended with mustard oil and five-spice, traditionally pickled for a bold, aromatic flavour.</p>
         </div>
 
         <div class="product-card">
-          <svg viewBox="0 0 100 120" aria-hidden="true">
-            <rect x="34" y="4" width="32" height="10" rx="3" fill="var(--brass)"/>
-            <path d="M24 18h52v74a10 10 0 0 1-10 10H34a10 10 0 0 1-10-10Z" fill="none" stroke="var(--ink)" stroke-width="2.5"/>
-            <path d="M27 48h46v40a7 7 0 0 1-7 7H34a7 7 0 0 1-7-7Z" fill="var(--lime)"/>
-            <circle cx="44" cy="68" r="7" fill="none" stroke="#5c6b34" stroke-width="2"/>
-            <circle cx="58" cy="78" r="6" fill="none" stroke="#5c6b34" stroke-width="2"/>
-          </svg>
-          <h3>Lime</h3>
+          <img src="photos/web/amlokhi-1.jpg" data-gallery="photos/web/amlokhi-1.jpg, photos/web/amlokhi-2.jpg" alt="Jar of Tholuwa Achar's amla (Indian gooseberry) pickle" loading="lazy">
+          <h3>Amlokhi</h3>
+          <p class="assamese-name">আমলখিৰ আচাৰ</p>
+          <div class="lang-toggle" role="group" aria-label="Description language">
+            <button type="button" class="lang-btn active" data-lang="en" aria-pressed="true">EN</button>
+            <button type="button" class="lang-btn" data-lang="as" aria-pressed="false">অস</button>
+          </div>
+          <p class="product-desc" data-en="Tangy amla pickled with mustard oil and roasted spices for a sharp, sour and flavourful bite." data-as="টেঙা আমলখি, মিঠা তেল আৰু ভজা মচলাৰে প্ৰস্তুত কৰা এক জিভাত পানী অনা টেঙা-মচলাযুক্ত আচাৰ।">Tangy amla pickled with mustard oil and roasted spices for a sharp, sour and flavourful bite.</p>
+        </div>
+
+        <div class="product-card">
+          <img src="photos/web/baah-gos-1.jpg" data-gallery="photos/web/baah-gos-1.jpg, photos/web/baah-gos-2.jpg" alt="Jar of Tholuwa Achar's white bamboo shoot pickle (boga xukaan)" loading="lazy">
+          <h3>Baah-gos <span style="font-weight:400;">(DRY)</span></h3>
+          <p class="assamese-name">বগা শুকান বাঁহগজৰ আচাৰ</p>
+          <div class="lang-toggle" role="group" aria-label="Description language">
+            <button type="button" class="lang-btn active" data-lang="en" aria-pressed="true">EN</button>
+            <button type="button" class="lang-btn" data-lang="as" aria-pressed="false">অস</button>
+          </div>
+          <p class="product-desc" data-en="Dry-shredded white bamboo shoot, sun-dried and traditionally pickled for an authentic Assamese flavour." data-as="বগা বাঁহগাজ ৰ'দত শুকুৱাই পৰম্পৰাগতভাৱে প্ৰস্তুত কৰা এক বিশেষ অসমীয়া আচাৰ।">Dry-shredded white bamboo shoot, sun-dried and traditionally pickled for an authentic Assamese flavour.</p>
+        </div>
+
+        <div class="product-card">
+          <img src="photos/web/baah-gos-achar-1.jpg" data-gallery="photos/web/baah-gos-achar-1.jpg, photos/web/baah-gos-achar-2.jpg" alt="Jar of Tholuwa Achar's bamboo shoot pickle in mustard oil" loading="lazy">
+          <h3>Baah-gos</h3>
+          <p class="assamese-name">বাঁহগজৰ আচাৰ</p>
+          <div class="lang-toggle" role="group" aria-label="Description language">
+            <button type="button" class="lang-btn active" data-lang="en" aria-pressed="true">EN</button>
+            <button type="button" class="lang-btn" data-lang="as" aria-pressed="false">অস</button>
+          </div>
+          <p class="product-desc" data-en="Fermented bamboo shoot, slow-pickled in mustard oil and spices for a distinctive tangy-spicy flavour." data-as="বাঁহগাজ, মিঠা তেল, জলকীয়া আৰু মচলাৰে লাহে লাহে পকাই প্ৰস্তুত কৰা এক টেঙা-জলা আৰু মচলাযুক্ত পৰম্পৰাগত আচাৰ।">Fermented bamboo shoot, slow-pickled in mustard oil and spices for a distinctive tangy-spicy flavour.</p>
+        </div>
+
+        <div class="product-card">
+          <img src="photos/web/bhoot-jolokia-1.jpg" data-gallery="photos/web/bhoot-jolokia-1.jpg, photos/web/bhoot-jolokia-2.jpg" alt="Jar of Tholuwa Achar's ghost pepper (bhoot jolokia) pickle" loading="lazy">
+          <h3>Bhoot-jolokia</h3>
+          <p class="assamese-name">ভূত জলকীয়াৰ আচাৰ</p>
+          <div class="lang-toggle" role="group" aria-label="Description language">
+            <button type="button" class="lang-btn active" data-lang="en" aria-pressed="true">EN</button>
+            <button type="button" class="lang-btn" data-lang="as" aria-pressed="false">অস</button>
+          </div>
+          <p class="product-desc" data-en="Assam's world-famous Bhoot Jolokia, hand-pickled into a fiery achar — only for those who dare." data-as="অসমৰ বিশ্ববিখ্যাত ভূত জলকীয়াৰে হাতেৰে প্ৰস্তুত কৰা এক তীব্ৰ জ্বলা আচাৰ — কেৱল সাহসীসকলৰ বাবে ।">Assam's world-famous Bhoot Jolokia, hand-pickled into a fiery achar — only for those who dare.</p>
+        </div>
+
+        <div class="product-card">
+          <img src="photos/web/bhoot-jolokia-paste-1.jpg" data-gallery="photos/web/bhoot-jolokia-paste-1.jpg, photos/web/bhoot-jolokia-paste-2.jpg" alt="Jar of Tholuwa Achar's ghost pepper paste" loading="lazy">
+          <h3>Bhoot-jolokia Paste</h3>
+          <p class="assamese-name">ভূত জলকীয়া বাটা</p>
+          <div class="lang-toggle" role="group" aria-label="Description language">
+            <button type="button" class="lang-btn active" data-lang="en" aria-pressed="true">EN</button>
+            <button type="button" class="lang-btn" data-lang="as" aria-pressed="false">অস</button>
+          </div>
+          <p class="product-desc" data-en="Authentic Bhoot Jolokia paste, finely ground in a mixer grinder — just a little can add a powerful kick to your food!" data-as="মিক্সাৰ গ্ৰাইণ্ডাৰত সুন্দৰকৈ বটি প্ৰস্তুত কৰা খাঁটি ভূত জলকীয়াৰ পেষ্ট — অলপ দিলেই খাদ্যৰ জুতি দুগুণ হ’ব!">Authentic Bhoot Jolokia paste, finely ground in a mixer grinder — just a little can add a powerful kick to your food!</p>
+        </div>
+
+        <div class="product-card">
+          <img src="photos/web/kordoi-1.jpg" data-gallery="photos/web/kordoi-1.jpg, photos/web/kordoi-2.jpg" alt="Jar of Tholuwa Achar's star fruit (kordoi) pickle" loading="lazy">
+          <h3>Kordoi</h3>
+          <p class="assamese-name">কৰদৈৰ আচাৰ</p>
+          <div class="lang-toggle" role="group" aria-label="Description language">
+            <button type="button" class="lang-btn active" data-lang="en" aria-pressed="true">EN</button>
+            <button type="button" class="lang-btn" data-lang="as" aria-pressed="false">অস</button>
+          </div>
+          <p class="product-desc" data-en="Whole sour star fruit pickled in mustard oil and spices for a tangy, savoury treat." data-as="টেঙা কৰদৈ, মিঠা তেল আৰু মচলাৰে গোটাকৈ প্ৰস্তুত কৰা এক জুতি লগা পৰম্পৰাগত আচাৰ।">Whole sour star fruit pickled in mustard oil and spices for a tangy, savoury treat.</p>
+        </div>
+
+        <div class="product-card">
+          <img src="photos/web/ou-tenga-1.jpg" data-gallery="photos/web/ou-tenga-1.jpg, photos/web/ou-tenga-2.jpg" alt="Jar of Tholuwa Achar's elephant apple (ou-tenga) pickle" loading="lazy">
+          <h3>Ou-tenga</h3>
+          <p class="assamese-name">ওউটেঙাৰ আচাৰ</p>
+          <div class="lang-toggle" role="group" aria-label="Description language">
+            <button type="button" class="lang-btn active" data-lang="en" aria-pressed="true">EN</button>
+            <button type="button" class="lang-btn" data-lang="as" aria-pressed="false">অস</button>
+          </div>
+          <p class="product-desc" data-en="Elephant Apple's naturally sharp tangy, slow-cooked into a rich and flavourful homemade achar" data-as="ওউটেঙাৰ প্ৰাকৃতিক টেঙা সোৱাদ অটুট ৰাখি লাহে লাহে ৰান্ধি প্ৰস্তুত কৰা এক ঘন আৰু সুস্বাদু ঘৰুৱা মচলাযুক্ত আচাৰ।">Elephant Apple's naturally sharp tangy, slow-cooked into a rich and flavourful homemade achar</p>
+        </div>
+
+        <div class="product-card">
+          <img src="photos/web/nemu-1.jpg" data-gallery="photos/web/nemu-1.jpg, photos/web/nemu-2.jpg" alt="Jar of Tholuwa Achar's lime (nemu) pickle" loading="lazy">
+          <h3>Nemu</h3>
           <p class="assamese-name">নেমুৰ আচাৰ</p>
           <div class="lang-toggle" role="group" aria-label="Description language">
             <button type="button" class="lang-btn active" data-lang="en" aria-pressed="true">EN</button>
             <button type="button" class="lang-btn" data-lang="as" aria-pressed="false">অস</button>
           </div>
-          <p class="product-desc" data-en="Whole limes, slow-pickled in their own juice." data-as="গোটা নেমু, নিজৰ ৰসতে লাহে লাহে আচাৰ পকোৱা।">Whole limes, slow-pickled in their own juice.</p>
+          <p class="product-desc" data-en="A fragrant homemade pickle made by rubbing salt onto sun-dried big round lemons and letting them slowly mature in the natural juice formed as the salt dissolves." data-as="ৰ'দত শুকুৱাই লোৱা গোটা গুল নেমুত নিমখ সানি থৈ, সেই নিমখ গলি তৈয়াৰ হোৱা ৰসতে লাহে লাহে পকিবলৈ দি প্ৰস্তুত কৰা এক সুগন্ধি ঘৰুৱা আচাৰ ।">A fragrant homemade pickle made by rubbing salt onto sun-dried big round lemons and letting them slowly mature in the natural juice formed as the salt dissolves.</p>
         </div>
 
         <div class="product-card">
-          <svg viewBox="0 0 100 120" aria-hidden="true">
-            <rect x="34" y="4" width="32" height="10" rx="3" fill="var(--brass)"/>
-            <path d="M24 18h52v74a10 10 0 0 1-10 10H34a10 10 0 0 1-10-10Z" fill="none" stroke="var(--ink)" stroke-width="2.5"/>
-            <path d="M27 48h46v40a7 7 0 0 1-7 7H34a7 7 0 0 1-7-7Z" fill="var(--chilli)"/>
-            <path d="M42 58 q-4 14 4 20" fill="none" stroke="#7a1f1f" stroke-width="3" stroke-linecap="round"/>
-            <path d="M56 64 q-4 12 3 16" fill="none" stroke="#7a1f1f" stroke-width="3" stroke-linecap="round"/>
-          </svg>
-          <h3>Chilli</h3>
-          <p class="assamese-name">জলকীয়াৰ আচাৰ</p>
+          <img src="photos/web/jolphai-1.jpg" data-gallery="photos/web/jolphai-1.jpg, photos/web/jolphai-2.jpg" alt="Jar of Tholuwa Achar's Indian olive (jolphai) pickle" loading="lazy">
+          <h3>Jolphai</h3>
+          <p class="assamese-name">জলফাইৰ আচাৰ</p>
           <div class="lang-toggle" role="group" aria-label="Description language">
             <button type="button" class="lang-btn active" data-lang="en" aria-pressed="true">EN</button>
             <button type="button" class="lang-btn" data-lang="as" aria-pressed="false">অস</button>
           </div>
-          <p class="product-desc" data-en="Fiery green &amp; red chillies, hand-pounded." data-as="জ্বলা সেউজীয়া আৰু ৰঙা জলকীয়া, হাতে বাটি সজা।">Fiery green &amp; red chillies, hand-pounded.</p>
+          <p class="product-desc" data-en="A mouth-watering tangy-salty and spiced homemade pickle of olives, prepared using old traditional local methods." data-as="পুৰণি থলুৱা পদ্ধতিৰে প্ৰস্তুত কৰা জলফাইৰ এক মুখৰোচক টেঙা-নুনীয়া আৰু মচলাযুক্ত ঘৰুৱা আচাৰ।">A mouth-watering tangy-salty and spiced homemade pickle of olives, prepared using old traditional local methods.</p>
         </div>
 
         <div class="product-card">
-          <svg viewBox="0 0 100 120" aria-hidden="true">
-            <rect x="34" y="4" width="32" height="10" rx="3" fill="var(--brass)"/>
-            <path d="M24 18h52v74a10 10 0 0 1-10 10H34a10 10 0 0 1-10-10Z" fill="none" stroke="var(--ink)" stroke-width="2.5"/>
-            <path d="M27 48h46v40a7 7 0 0 1-7 7H34a7 7 0 0 1-7-7Z" fill="#d9cf9a"/>
-            <g stroke="var(--olive)" stroke-width="3" stroke-linecap="round">
-              <line x1="38" y1="56" x2="38" y2="86"/>
-              <line x1="50" y1="52" x2="50" y2="86"/>
-              <line x1="62" y1="58" x2="62" y2="86"/>
-            </g>
-          </svg>
-          <h3>Khorisa</h3>
-          <p class="assamese-name">খৰিচাৰ আচাৰ</p>
-          <div class="lang-toggle" role="group" aria-label="Description language">
-            <button type="button" class="lang-btn active" data-lang="en" aria-pressed="true">EN</button>
-            <button type="button" class="lang-btn" data-lang="as" aria-pressed="false">অস</button>
-          </div>
-          <p class="product-desc" data-en="Fermented bamboo shoot — a true Assamese staple." data-as="তিতা খৰিচা — অসমীয়া ঘৰৰ এক প্ৰকৃত পৰম্পৰাগত আচাৰ।">Fermented bamboo shoot — a true Assamese staple.</p>
-        </div>
-
-        <div class="product-card">
-          <svg viewBox="0 0 100 120" aria-hidden="true">
-            <rect x="34" y="4" width="32" height="10" rx="3" fill="var(--brass)"/>
-            <path d="M24 18h52v74a10 10 0 0 1-10 10H34a10 10 0 0 1-10-10Z" fill="none" stroke="var(--ink)" stroke-width="2.5"/>
-            <path d="M27 48h46v40a7 7 0 0 1-7 7H34a7 7 0 0 1-7-7Z" fill="#efe2c0"/>
-            <circle cx="40" cy="62" r="6" fill="var(--mango)"/>
-            <circle cx="58" cy="64" r="6" fill="var(--chilli)"/>
-            <circle cx="48" cy="78" r="6" fill="var(--lime)"/>
-            <circle cx="62" cy="80" r="5" fill="var(--olive)"/>
-          </svg>
-          <h3>Mixed</h3>
+          <img src="photos/web/mix-achar.jpg" data-gallery="photos/web/mix-achar.jpg, photos/web/mix-achar-1.jpg" alt="Jar of Tholuwa Achar's mixed pickle" loading="lazy">
+          <h3>Mix</h3>
           <p class="assamese-name">মিহলি আচাৰ</p>
           <div class="lang-toggle" role="group" aria-label="Description language">
             <button type="button" class="lang-btn active" data-lang="en" aria-pressed="true">EN</button>
             <button type="button" class="lang-btn" data-lang="as" aria-pressed="false">অস</button>
           </div>
-          <p class="product-desc" data-en="A bit of everything, for the indecisive." data-as="সকলোবোৰৰ অলপ অলপ, যিসকলে বাছি নাপায় তেওঁলোকৰ বাবে।">A bit of everything, for the indecisive.</p>
+          <p class="product-desc" data-en="A wonderful blend of several pickles prepared with homemade spices — perfect for those who want to enjoy a little of every flavour in one pickle." data-as="ঘৰুৱা মচলাৰে প্ৰস্তুত কৰা কেইবাবিধো আচাৰৰ এক অপূৰ্ব সংমিশ্ৰণ — সকলো সোৱাদ একেলগে উপভোগ কৰাৰ বাবে এক উত্তম মিহলি আচাৰ।">A wonderful blend of several pickles prepared with homemade spices — perfect for those who want to enjoy a little of every flavour in one pickle.</p>
         </div>
 
       </div>
@@ -486,49 +579,50 @@
         <div class="kicker" style="color:var(--red);">Beyond pickles</div>
         <h2>More from the kitchen</h2>
       </div>
-      <p style="text-align:center;">Maa's shop isn't only achar — these change with the season, so ask in-store for what's fresh today.</p>
+      <p style="text-align:center;">Our shop isn't just pickles (achar) — these change with the season and demand, so ask in-store for what's fresh today.</p>
       <div class="more-grid">
 
         <div class="more-card">
-          <svg viewBox="0 0 100 80" aria-hidden="true">
-            <ellipse cx="50" cy="62" rx="34" ry="9" fill="none" stroke="var(--brass)" stroke-width="3"/>
-            <ellipse cx="50" cy="46" rx="30" ry="8" fill="none" stroke="var(--brass)" stroke-width="3"/>
-            <ellipse cx="50" cy="31" rx="26" ry="7" fill="none" stroke="var(--ink)" stroke-width="3"/>
-          </svg>
-          <h3>Pithas</h3>
-          <p>Seasonal rice cakes, made fresh for Bihu and beyond.</p>
+          <img src="photos/web/pithaguri.jpg" alt="Bag of Tholuwa Achar's pithaguri (rice flour for pitha)" loading="lazy">
+          <h3>Pithaguri</h3>
+          <div class="lang-toggle" role="group" aria-label="Description language">
+            <button type="button" class="lang-btn active" data-lang="en" aria-pressed="true">EN</button>
+            <button type="button" class="lang-btn" data-lang="as" aria-pressed="false">অস</button>
+          </div>
+          <p class="product-desc" data-en="Traditionally prepared rice flour made by soaking, drying, and finely grinding rice — perfect for making homemade pitha, laru and to eat with jalpan." data-as="পৰম্পৰাগতভাৱে চাউল তিয়াই, শুকুৱাই মিহিকৈ গুড়ি কৰি লোৱা হয় — পিঠা, লাৰু আৰু বিভিন্ন জলপানৰ সৈতে খাবলৈ একেবাৰে উপযুক্ত ।">Traditionally prepared rice flour made by soaking, drying, and finely grinding rice — perfect for making homemade pitha, laru and to eat with jalpan.</p>
         </div>
 
         <div class="more-card">
-          <svg viewBox="0 0 100 80" aria-hidden="true">
-            <path d="M28 30h44l-5 34a8 8 0 0 1-8 7H41a8 8 0 0 1-8-7Z" fill="none" stroke="var(--ink)" stroke-width="3"/>
-            <path d="M33 36h34" stroke="var(--chilli)" stroke-width="3"/>
-            <line x1="50" y1="14" x2="50" y2="26" stroke="var(--olive)" stroke-width="3" stroke-linecap="round"/>
-          </svg>
+          <img src="photos/web/sandoh-1.jpg" data-gallery="photos/web/sandoh-1.jpg, photos/web/sandoh-2.jpg" alt="Bag of Tholuwa Achar's sandoh (roasted rice flour)" loading="lazy">
           <h3>Sandoh</h3>
-          <p>Fine roasted rice flour, hand-ground the traditional way — the base for jalpan at home.</p>
+          <div class="lang-toggle" role="group" aria-label="Description language">
+            <button type="button" class="lang-btn active" data-lang="en" aria-pressed="true">EN</button>
+            <button type="button" class="lang-btn" data-lang="as" aria-pressed="false">অস</button>
+          </div>
+          <p class="product-desc" data-en="Prepared by soaking and dry-roasting rice until golden colour arises, then grinding it into a fragrant powder — typically enjoyed as jalpan with milk and jaggery." data-as="পৰম্পৰাগতভাৱে চাউল তিয়াই ভাজি সোণালী ৰঙৰ গুড়ি কৰি লোৱা হয় — সাধাৰণতে গাখীৰ-গুৰৰ সৈতে জলপান হিচাপে খোৱা হয় ।">Prepared by soaking and dry-roasting rice until golden colour arises, then grinding it into a fragrant powder — typically enjoyed as jalpan with milk and jaggery.</p>
         </div>
 
         <div class="more-card">
-          <svg viewBox="0 0 100 80" aria-hidden="true">
-            <path d="M50 16 70 56H30Z" fill="none" stroke="var(--brass)" stroke-width="3" stroke-linejoin="round"/>
-            <path d="M22 64h56" stroke="var(--ink)" stroke-width="3" stroke-linecap="round"/>
-          </svg>
-          <h3>Snacks</h3>
-          <p>Traditional savouries, perfect with evening tea.</p>
+          <img src="photos/web/behar-1.jpg" data-gallery="photos/web/behar-1.jpg, photos/web/behar-2.jpg" alt="Tholuwa Achar's kharoli (behar), a spicy mustard-powder coated dish, wrapped in banana leaf" loading="lazy">
+          <h3>Kharoli (Behar)</h3>
+          <div class="lang-toggle" role="group" aria-label="Description language">
+            <button type="button" class="lang-btn active" data-lang="en" aria-pressed="true">EN</button>
+            <button type="button" class="lang-btn" data-lang="as" aria-pressed="false">অস</button>
+          </div>
+          <p class="product-desc" data-en="A homemade dish rolled in roasted mustard powder and freshly wrapped in banana leaf." data-as="খাৰেৰে সনা সৰিয়হৰ গুড়ি, কলপাতত মেৰিয়াই সতেজকৈ সজা এক পৰম্পৰাগত ঘৰুৱা খাদ্য — সোৱাদত অলপ জলা ।">A homemade dish rolled in roasted mustard powder and freshly wrapped in banana leaf.</p>
         </div>
 
         <div class="more-card">
-          <svg viewBox="0 0 100 80" aria-hidden="true">
-            <circle cx="50" cy="40" r="26" fill="none" stroke="var(--brass)" stroke-width="3"/>
-            <path d="M38 40h24M50 28v24" stroke="var(--ink)" stroke-width="3" stroke-linecap="round"/>
-          </svg>
-          <h3>Behar</h3>
-          <p>A homemade seasonal snack — ask in-store for what's fresh today.</p>
+          <img src="photos/web/kola-khar-1.jpg" data-gallery="photos/web/kola-khar-1.jpg, photos/web/kola-khar-2.jpg" alt="Tholuwa Achar's kola-khar, a traditional Assamese alkaline extract" loading="lazy">
+          <h3>Kola-khar</h3>
+          <div class="lang-toggle" role="group" aria-label="Description language">
+            <button type="button" class="lang-btn active" data-lang="en" aria-pressed="true">EN</button>
+            <button type="button" class="lang-btn" data-lang="as" aria-pressed="false">অস</button>
+          </div>
+          <p class="product-desc" data-en="Made by filtering the ash of sun-dried banana peels — an essential ingredient for preparing khar dishes at home." data-as="ৰ’দত শুকুৱাই লোৱা কলৰ মূৰৰ পৰা ছাঁই ফিল্টাৰ কৰি পৰম্পৰাগতভাৱে তৈয়াৰ কৰা হয় — ঘৰুৱা খাৰৰ ব্যঞ্জন ৰন্ধাৰ বাবে এক প্ৰয়োজনীয় উপাদান।">Made by filtering the ash of sun-dried banana peels — an essential ingredient for preparing khar dishes at home.</p>
         </div>
 
       </div>
-      <p class="more-note"><em>Placeholder items shown — tell me the actual specialities Maa sells and I'll update these.</em></p>
     </div>
   </section>
 
@@ -544,20 +638,26 @@
 
       <div class="testimonial-card">
         <div class="stars">★★★★★</div>
-        <p class="testimonial-quote" lang="as">"এইটো একেবাৰে ঘৰত সজা আচাৰৰ দৰে লাগে — বজাৰৰ আচাৰতকৈ বহু ভাল।"</p>
+        <p class="testimonial-quote" lang="as">"প্ৰায় সকলো আচাৰেই অলপ অলপকৈ খাই চালোঁ — সোৱাদ বৰ ভাল আৰু ঘৰুৱা ধৰণৰ হোৱাৰ বাবে স্বাস্থ্যকৰ হয়।"</p>
         <p class="testimonial-name">— Pori K</p>
       </div>
 
       <div class="testimonial-card">
         <div class="stars">★★★★★</div>
-        <p class="testimonial-quote" lang="as">"খৰিচাৰ আচাৰটো একেবাৰে আচল স্বাদৰ, মায়ে সজা যেন লাগিল।"</p>
+        <p class="testimonial-quote" lang="as">"খৰিচাৰ আচাৰটো একেবাৰে আচল স্বাদৰ। খাই বৰ মজা লাগিল!"</p>
         <p class="testimonial-name">— Juri S</p>
       </div>
 
       <div class="testimonial-card">
         <div class="stars">★★★★★</div>
-        <p class="testimonial-quote" lang="as">"আমৰ আচাৰটো লৈছিলো, গোটেই পৰিয়ালে ভাল পাইছে। আকৌ ল'ম।"</p>
+        <p class="testimonial-quote" lang="as">"আমৰ আচাৰটো লৈছিলোঁ, গোটেই পৰিয়ালে ভাল পাইছে। সোৱাদটো বৰ ভাল লাগিল, আকৌ ল’ম।"</p>
         <p class="testimonial-name">— Arun D</p>
+      </div>
+  
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-quote" lang="as">"বেহাৰটো খাই বৰ ভাল লাগিল, একেবাৰে ঘৰুৱা সোৱাদ। লগত গামোচাখনো বৰ ধুনীয়া — বৰ ভাল লাগিল।"</p>
+        <p class="testimonial-name">— Ramesh K</p>
       </div>
 
     </div>
@@ -571,12 +671,9 @@
       <h2>Come pick your jars in person</h2>
     </div>
     <div class="visit-card">
-      <a class="visit-phone" href="tel:+91XXXXXXXXXX">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
-        +91 XXXXX XXXXX
-      </a>
       <p>We currently take orders in person only — drop by the shop and pick your favourites straight off the shelf.</p>
       <p class="visit-note">Shop address — Mohila Bazar, M.G. Road, Mangaldai Town, Mangaldai, Assam</p>
+      <p class="visit-hours">Open Saturdays: 8am – 6pm — Mohila Bazar.</p>
       <div class="map-frame">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3572.5381591185132!2d92.02790757525457!3d26.438376576933077!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x375b1d77b0c7e40d%3A0x34fe3fe8eac91329!2sSamannay%20Atma%20Sahayak%20Goot!5e0!3m2!1sen!2sin!4v1781854715633!5m2!1sen!2sin" width="600" height="450" style="border:0;"
          allowfullscreen=""
@@ -600,16 +697,19 @@
 </div>
 
 <footer>
-  <p>Made with love in Assam · Maa's Handmade Pickle</p>
+  <p>Made with love in Assam · Tholuwa Achar</p>
 </footer>
 
-<a class="sticky-call" href="tel:+91XXXXXXXXXX">
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
-  Call to order
-</a>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer" hidden>
+  <button type="button" class="lightbox-close" aria-label="Close">&times;</button>
+  <button type="button" class="lightbox-prev" aria-label="Previous photo">&#10094;</button>
+  <img class="lightbox-img" src="" alt="">
+  <button type="button" class="lightbox-next" aria-label="Next photo">&#10095;</button>
+</div>
 
 <script>
-  document.querySelectorAll('.product-card').forEach(function(card){
+  document.querySelectorAll('.product-card, .more-card').forEach(function(card){
     var buttons = card.querySelectorAll('.lang-btn');
     var desc = card.querySelector('.product-desc');
     if (!desc || !buttons.length) return;
@@ -636,6 +736,81 @@
       });
     });
   });
+</script>
+
+<script>
+  (function(){
+    var lightbox = document.getElementById('lightbox');
+    var lightboxImg = lightbox.querySelector('.lightbox-img');
+    var btnClose = lightbox.querySelector('.lightbox-close');
+    var btnPrev = lightbox.querySelector('.lightbox-prev');
+    var btnNext = lightbox.querySelector('.lightbox-next');
+    var currentGroup = [];
+    var current = 0;
+    var currentAlt = '';
+
+    function render(){
+      lightboxImg.src = currentGroup[current];
+      var multi = currentGroup.length > 1;
+      lightboxImg.alt = multi ? currentAlt + ' (photo ' + (current + 1) + ' of ' + currentGroup.length + ')' : currentAlt;
+      btnPrev.hidden = !multi;
+      btnNext.hidden = !multi;
+    }
+    function open(group, startIndex, alt){
+      currentGroup = group;
+      current = startIndex;
+      currentAlt = alt || '';
+      render();
+      lightbox.hidden = false;
+      document.body.classList.add('lightbox-open');
+    }
+    function close(){
+      lightbox.hidden = true;
+      document.body.classList.remove('lightbox-open');
+    }
+    function step(delta){
+      current = (current + delta + currentGroup.length) % currentGroup.length;
+      render();
+    }
+
+    document.querySelectorAll('.product-card img, .more-card img').forEach(function(img){
+      img.setAttribute('tabindex', '0');
+      img.setAttribute('role', 'button');
+      var raw = img.getAttribute('data-gallery');
+      var group = raw ? raw.split(',').map(function(s){ return s.trim(); }) : [img.getAttribute('src')];
+      var startIndex = Math.max(0, group.indexOf(img.getAttribute('src')));
+
+      function trigger(){ open(group, startIndex, img.alt); }
+      img.addEventListener('click', trigger);
+      img.addEventListener('keydown', function(e){
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); trigger(); }
+      });
+    });
+
+    btnClose.addEventListener('click', close);
+    btnPrev.addEventListener('click', function(){ step(-1); });
+    btnNext.addEventListener('click', function(){ step(1); });
+    lightbox.addEventListener('click', function(e){
+      if (e.target === lightbox) close();
+    });
+    document.addEventListener('keydown', function(e){
+      if (lightbox.hidden) return;
+      if (e.key === 'Escape') close();
+      if (e.key === 'ArrowLeft') step(-1);
+      if (e.key === 'ArrowRight') step(1);
+    });
+
+    var touchStartX = null;
+    lightbox.addEventListener('touchstart', function(e){
+      touchStartX = e.changedTouches[0].clientX;
+    }, { passive: true });
+    lightbox.addEventListener('touchend', function(e){
+      if (touchStartX === null) return;
+      var dx = e.changedTouches[0].clientX - touchStartX;
+      if (Math.abs(dx) > 40) step(dx < 0 ? 1 : -1);
+      touchStartX = null;
+    }, { passive: true });
+  })();
 </script>
 
 </body>
